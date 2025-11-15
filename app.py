@@ -1,21 +1,22 @@
 import streamlit as st
+from openai import OpenAI
 
 def analyze(uploaded_image, disease):
-    disease = 1
+    disease = 2
     return disease
     #query for diseases
     #if healthy, disease = 1
     #if viral, disease = 2
     #if bacterial, disease = 3
-    #if not a cow, disease = 4
+    #if not a [thing], disease = 4
 
-st.set_page_config(layout="wide", page_title="Skin Disease Detection")
-st.title("Skin Disease Detection")
+st.set_page_config(layout="wide", page_title="Disease Detection")
+st.title("Disease Detection")
 
 imageUploaded = False
 disease = 0
 
-col1, col2, col3 = st.columns([0.3, 0.4, 0.3], gap="small", vertical_alignment="top", border=True, width="stretch")
+col1, col2, col3 = st.columns([0.25, 0.4, 0.35], gap="small", vertical_alignment="top", border=True, width="stretch")
 
 with col1:
     st.write("# Upload images 📷")
@@ -37,25 +38,49 @@ with col3:
         case 1:
             '''
                 # HEALTHY
-                #### This cow does not appear to have a skin infection
+                #### This [thing] does not appear to have a skin infection
             '''
         case 2:
             '''
-                # VIRAL INFECTION
+                # ILLNESS 1
+                ### Learn more: [USDA article](https://www.usda.gov/)
                 ### Symptoms
+                * A
+                * B
+                * C
+                ### Treatment
+                * A
+                * B
+                * C
+                ### Prevention
                 * A
                 * B
                 * C
             '''
         case 3:
             '''
-                # BACTERIAL INFECTION
+                # ILLNESS 2
+                ### Learn more: [USDA article](https://www.usda.gov/)
                 ### Symptoms
+                * A
+                * B
+                * C
+                ### Treatment
+                * A
+                * B
+                * C
+                ### Prevention
                 * A
                 * B
                 * C
             '''
         case 4:
-            st.write("## Error: The model does not recognize a cow in the uploaded image")
+            st.write("## Error: The model does not recognize a [thing] in the uploaded image")
         case _:
             st.write("# Diagnosis")
+
+    match disease: 
+        case 1 | 2 | 3:
+            with st.expander("Additional Information", expanded=False, icon=None, width="stretch"):
+                #Chatbot
+                st.write("# Diagnosis")
