@@ -18,7 +18,7 @@ if "imageUploaded" not in st.session_state:
 if "disease" not in st.session_state:
     st.session_state.disease = 0
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-3.5-turbo"
+    st.session_state["openai_model"] = "gpt-5-mini"
 if "messages" not in st.session_state:
     st.session_state.messages = []
 if "file" not in st.session_state:
@@ -39,7 +39,7 @@ with col1:
 with col2:
     if (st.session_state.imageUploaded == False):
         st.write("# Sample Image")
-        st.image("assets/kirby.jpg")
+        st.image("https://upload.wikimedia.org/wikipedia/commons/5/5c/Kirby.png")
     else:
         st.write("# Uploaded Image")
         st.image(st.session_state.file)
@@ -53,7 +53,7 @@ with col3:
             '''
         case 2:
             '''
-                # ILLNESS 1
+                # ILLNESS 1 🦠
                 ### Learn more: [USDA article](https://www.usda.gov/)
                 ### Symptoms
                 * A
@@ -70,7 +70,7 @@ with col3:
             '''
         case 3:
             '''
-                # ILLNESS 2
+                # ILLNESS 2 🦠
                 ### Learn more: [USDA article](https://www.usda.gov/)
                 ### Symptoms
                 * A
@@ -93,7 +93,7 @@ with col3:
     match st.session_state.disease: 
         case 1 | 2 | 3:
             '''
-                ### Consider prompting the chat bot for additional resources!
+                ### Consider prompting the chat bot for additional resources and feedback!
             '''
 
             client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
