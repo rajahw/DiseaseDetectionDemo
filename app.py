@@ -31,7 +31,7 @@ with col1:
     upload = st.file_uploader("Select an image that resembles the sample", type=["png", "jpg", "jpeg"], accept_multiple_files=False)
     if (upload != None):
         st.session_state.file = upload
-        if st.button("Analyze Image"):
+        if st.button("Analyze image"):
             if st.session_state.file:
                 st.session_state.imageUploaded = True
                 st.session_state.disease = analyze(st.session_state.file, st.session_state.disease)
