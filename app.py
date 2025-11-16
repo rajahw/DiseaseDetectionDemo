@@ -76,8 +76,8 @@ with col3:
     match st.session_state.disease: 
         case 1:
             '''
-                # HEALTHY
-                #### This [thing] does not appear to have [thing]
+                # HEALTHY ❤️
+                #### This cow does not appear to have LSD or FAM
             '''
         case 2:
             '''
