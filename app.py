@@ -82,36 +82,39 @@ with col3:
         case 2:
             '''
                 # Lumpy Skin Disease (LSD) 🦠
-                ### Learn more: [USDA article](https://www.usda.gov/)
+                ### Learn more: [WOAH article](https://www.woah.org/en/disease/lumpy-skin-disease/)
                 ### Symptoms
-                * A
-                * B
-                * C
+                * Fever
+                * Lumpy Skin
+                * __Decreased Fertility__
+                * __Death__
                 ### Treatment
-                * A
-                * B
-                * C
+                * Antibiotics
+                * Anti-Inflammatory Drugs
+                * Wound Care
+                * LSD is __uncurable__ at the moment
                 ### Prevention
-                * A
-                * B
-                * C
+                * Routine Immunization (Annual Vaccination and Boosters)
+                * Biosecurity (Sanitization, Insecticides, etc.)
+                * Isolation and/or Culling of infected cows
             '''
         case 3:
             '''
                 # Foot and Mouth Disease (FAM) 🦠
-                ### Learn more: [USDA article](https://www.usda.gov/)
+                ### Learn more: [WOAH article](https://www.woah.org/en/disease/foot-and-mouth-disease/)
                 ### Symptoms
-                * A
-                * B
-                * C
+                * Fever
+                * Sores on and around the mouth, hooves, and teats
+                * __Decreased milk production__
+                * __Debilitation or Death__
                 ### Treatment
-                * A
-                * B
-                * C
+                * Anesthetics
+                * Wound Care
+                * FAM is __uncurable__ at the moment
                 ### Prevention
-                * A
-                * B
-                * C
+                * Vaccination
+                * Biosecurity (Sanitization, Insecticides, etc.)
+                * Isolation and/or Culling of infected cows
             '''
         case _:
             st.write("# Diagnosis")
